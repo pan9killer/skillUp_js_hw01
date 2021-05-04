@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body style="background-color: rgb(241, 139, 139)">
+        <style>
+        #validation-input {
+        border: 3px solid #bdbdbd;
+        }
+        #validation-input.valid {
+        border-color: #4caf50;
+        }
+        #validation-input.invalid {
+        border-color: #f44336;
+        }
+        </style>
+
+        <input
+    type="text"
+    id="validation-input"
+    data-length="6"
+    placeholder="Введи 6 символов"
+    />
+
+        <script src="./task_06.js" type="module"></script>
+    </body>
+</html>
