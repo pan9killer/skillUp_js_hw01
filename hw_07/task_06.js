@@ -27,15 +27,12 @@ inputRef.addEventListener('blur', changingFunc);
 
 function changingFunc() {
     if ((inputRef.value).length === 0) {
-        console.log('kurwa');
         inputRef.classList.remove('valid')
     }
     if ((inputRef.value).length > dataLength) {
-        console.log('kurwa2');
         inputRef.className = 'invalid'
     }
     if ((inputRef.value).length >= 1 && (inputRef.value).length <= dataLength) {
-        console.log('kurwa1');
         inputRef.className = 'valid'
     }
 }

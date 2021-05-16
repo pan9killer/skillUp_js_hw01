@@ -22,32 +22,24 @@ const images = [
     alt: 'Group of Horses Running',
 },
 ];
-// console.log(images[0].alt);
-// let ulRef = document.querySelector('ul#gallery');
-// let liRef = document.createElement('li');
-// let imgRef = document.createElement('img');
-// imgRef.alt = images[0].alt
-// imgRef.src = images[0].url
-// ulRef.append(liRef)
-// liRef.append(imgRef)
+
 let ulRef = document.querySelector('ul#gallery');
 
-
+const imgArr = [];
 const showImg = images => images.forEach(image => {
     let liRef = document.createElement('li');
     let imgRef = document.createElement('img');
-    imgRef.style.display = 'flex'
     liRef.style.display = 'flex'
-    imgRef.style.width = '1260px'
-    imgRef.style.height = '750px'
     liRef.style.padding = '25px'
     liRef.style.alignItems = 'center'
     liRef.style.flexDirection = 'column'
     
     imgRef.alt = image.alt
     imgRef.src = image.url
-    ulRef.append(liRef)
-    liRef.append(imgRef)
+    liRef.insertAdjacentHTML('beforeend', `<img src="${image.url}" alt="${image.alt}" width="1260px" height="750px"></img>`)
+    imgArr.push(liRef)
 });
-showImg(images)
+showImg(images);
+
+ulRef.append(...imgArr)
 
