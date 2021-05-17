@@ -28,14 +28,12 @@ let ulRef = document.querySelector('ul#gallery');
 const imgArr = [];
 const showImg = images => images.forEach(image => {
     let liRef = document.createElement('li');
-    let imgRef = document.createElement('img');
     liRef.style.display = 'flex'
     liRef.style.padding = '25px'
     liRef.style.alignItems = 'center'
     liRef.style.flexDirection = 'column'
     
-    imgRef.alt = image.alt
-    imgRef.src = image.url
+    
     liRef.insertAdjacentHTML('beforeend', `<img src="${image.url}" alt="${image.alt}" width="1260px" height="750px"></img>`)
     imgArr.push(liRef)
 });
